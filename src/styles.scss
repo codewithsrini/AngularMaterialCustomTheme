@@ -1,1 +1,87 @@
 /* You can add global styles to this file, and also import other style files */
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+
+@import "custom-theme";
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    //  font-family: mat-font-family($config);
+     font-weight: normal;
+     padding: 0;
+     margin: 0;
+  }
+  
+  .mainToolbar .toolbar-icon {
+     margin: 0 8px;
+     cursor: pointer;
+     font-size: 32px;
+     height: 32px;
+     width: 32px;
+  }
+  .mainToolbar .toolbar-avatar {
+     background-size: cover;
+     box-shadow: none;
+     background-image: url('http://i.pravatar.cc/300');
+  }
+  
+  .mainToolbar .toolbar-spacer {
+     flex: 1 1 auto;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+  .example-container > * {
+    width: 100%;
+  }
+  
+  
+  //  For tabbed bottom line
+  .tabs .mat-ink-bar {
+     height: 4px;
+  }
+  
+  .example-form mat-form-field{
+    margin: 25px;
+    width: 80%;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  .example-margin {
+    margin: 0 10px;
+  }
+
+
+
+.btn-wrapper {
+padding: 20px;
+}
+
+.btn {
+margin-left: 10px !important;
+margin-right: 10px !important;
+}
+
+.btn-default {
+background-color: #3F51B5 !important;
+}
+
+.btn-purple {
+background-color: #9C27B0 !important;
+}
+
+.btn-pink {
+background-color: #E91E63 !important;
+}
+
+.btn-deep-orange {
+background-color: #FF5722 !important;
+}

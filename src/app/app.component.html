@@ -1,21 +1,130 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div [ngClass]="selectedTheme">
 
-<router-outlet></router-outlet>
+  <mat-toolbar class="mainToolbar" color="primary">
+    My Awesome Toolbar
+    <span class="toolbar-spacer"></span>
+  
+    <mat-icon class="toolbar-icon" color="accent">add_circle</mat-icon>
+    <mat-icon class="toolbar-icon" >notifications</mat-icon>
+    <button
+      class="toolbar-avatar"
+      mat-mini-fab
+      color="primary"
+    >
+  </button>
+  </mat-toolbar>
+  
+  <div class="sub-section">
+
+    
+    <div>
+      <div class="btn-wrapper">
+        <button mat-mini-fab class="btn btn-default" (click)="selectedTheme='default'"></button>
+        <button mat-mini-fab class="btn btn-purple" (click)="selectedTheme='purple'"></button>
+        <button mat-mini-fab class="btn btn-pink" (click)="selectedTheme='pink'"></button>
+        <button mat-mini-fab class="btn btn-deep-orange" (click)="selectedTheme='deep-orange'"></button>
+      </div>
+    </div>
+
+
+    <mat-tab-group class="tabs" color="accent" >
+      <mat-tab label="Dashboard">
+        <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Input">
+          </mat-form-field>
+      
+          <mat-form-field>
+            <textarea matInput placeholder="Textarea"></textarea>
+          </mat-form-field>
+      
+          <mat-form-field>
+            <mat-select placeholder="Select">
+              <mat-option value="option">Option</mat-option>
+              <mat-option value="1">Option 1</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+            <mat-datepicker #picker color="accent"></mat-datepicker>
+          </mat-form-field>
+  
+          <section class="example-section">
+            <mat-checkbox class="example-margin" >Checkbox 1</mat-checkbox>
+            <mat-checkbox class="example-margin" >Checkbox 2</mat-checkbox>
+          </section>
+  
+          <section class="example-section">
+            <mat-radio-group>
+              <mat-radio-button class="example-margin" value="after">Radio 1</mat-radio-button>
+              <mat-radio-button class="example-margin" value="before">Radio 2</mat-radio-button>
+            </mat-radio-group>
+          </section>
+        </div>
+  <mat-progress-bar mode="determinate" value="40" color="accent"></mat-progress-bar>
+      </mat-tab>
+      <mat-tab label="Projects">
+        <div class="example-container alternate-teal-theme ">
+          <mat-form-field>
+            <input matInput placeholder="Input" />
+          </mat-form-field>
+  
+          <mat-form-field>
+            <textarea matInput placeholder="Textarea"></textarea>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-select placeholder="Select">
+              <mat-option value="option">Option</mat-option>
+              <mat-option value="1">Option 1</mat-option>
+            </mat-select>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input
+              matInput
+              [matDatepicker]="picker1"
+              placeholder="Choose a date"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker1"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker1 color="accent"></mat-datepicker>
+          </mat-form-field>
+  
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Checkbox 1</mat-checkbox>
+            <mat-checkbox class="example-margin">Checkbox 2</mat-checkbox>
+          </section>
+  
+          <section class="example-section">
+            <mat-radio-group>
+              <mat-radio-button class="example-margin" value="after"
+                >Radio 1</mat-radio-button
+              >
+              <mat-radio-button class="example-margin" value="before"
+                >Radio 2</mat-radio-button
+              >
+            </mat-radio-group>
+          </section>
+  
+          <section class="example-section">
+            <button mat-raised-button color="primary">Submit</button>
+          </section>
+  
+          <mat-progress-bar
+            mode="determinate"
+            value="40"
+            color="accent"
+          ></mat-progress-bar>
+        </div>
+      </mat-tab>
+      <mat-tab label="Users">Users Tab</mat-tab>
+    </mat-tab-group>
+  </div>
+  
+  <router-outlet></router-outlet>
+</div>
